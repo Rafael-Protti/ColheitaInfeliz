@@ -5,6 +5,6 @@ public class CropSO : ScriptableObject
 {
     public SeedType croptype;
     public int growthTime;
-    public int manegementCost;
+    public int managementCost;
     public int sellCost;
 }

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CarrotSeedSO
   m_EditorClassIdentifier: Assembly-CSharp::SeedSO
   type: 0
-  crop: {fileID: 6702149539990112773, guid: 484fcff00f0b9cc46a2596ff8dc74fe5, type: 3}
-  growthTime: 60
-  manegementCost: 2
+  seedBagObject: {fileID: 2577850996413558230, guid: 881964bf507b0794fa5cdf611267fbaa, type: 3}
+  cropObject: {fileID: 6702149539990112773, guid: 484fcff00f0b9cc46a2596ff8dc74fe5, type: 3}
+  buyCost: 4

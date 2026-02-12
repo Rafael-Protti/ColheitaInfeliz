@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PotatoSO
   m_EditorClassIdentifier: Assembly-CSharp::CropSO
   croptype: 2
-  growthTime: 0
-  manegementCost: 0
-  sellCost: 0
+  growthTime: 120
+  managementCost: 4
+  sellCost: 48

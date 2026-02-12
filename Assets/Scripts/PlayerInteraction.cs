@@ -9,20 +9,23 @@ public class PlayerInteraction : MonoBehaviour
     {
         if(other.gameObject.CompareTag("FarmLand") && wheelBarrel != null)
         {
-            wheelBarrel.GetComponent<WheelBarrel>().TakeSeed();
-            Transform seed = wheelBarrel.GetComponent<WheelBarrel>().nextSeed;
+            WheelBarrel.instance.TakeSeed();
+            Transform seed = WheelBarrel.instance.nextSeed;
             other.gameObject.GetComponent<FarmLand>().PlantSeed(seed);
+            return;
         }
 
         if (other.gameObject.CompareTag("WheelBarrel"))
         {
-            other.gameObject.GetComponent<WheelBarrel>().CarryingByPlayer(wheelBarrelPosition);
+            WheelBarrel.instance.EquipWheelBarrel(wheelBarrelPosition);
             wheelBarrel = other.gameObject;
+            return;
         }
 
-        if (other.gameObject.CompareTag("SeedBag"))
+        if (other.gameObject.CompareTag("ShopArea"))
         {
-            wheelBarrel.GetComponent<WheelBarrel>().LoadSlot(other.gameObject.transform);
+            WheelBarrel.instance.LoadSlot(other.gameObject.GetComponent<ShopArea>().seedBag);
+            return;
         }
     }
 }

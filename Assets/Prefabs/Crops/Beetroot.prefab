@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3513984177741936702}
   - component: {fileID: 2618269498630902240}
   - component: {fileID: 3537836841194406537}
+  - component: {fileID: 5522815640249771535}
   m_Layer: 0
   m_Name: Beetroot
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 6362504447349605742}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.001, z: 12.601}
+  m_LocalPosition: {x: 0, y: 0.001, z: 8.101}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -114,3 +115,16 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5522815640249771535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6362504447349605742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76ede4a7ac7653b49b7d4605f2ab24bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Crop
+  cropSO: {fileID: 11400000, guid: 791d3e6d7c23e8a4f8a72af29142dea6, type: 2}

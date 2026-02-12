@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: PotatoSeedSO
   m_EditorClassIdentifier: Assembly-CSharp::SeedSO
   type: 2
-  crop: {fileID: 4185280588983081536, guid: 56c1ccab2319ccb49951c645a2e90f97, type: 3}
-  growthTime: 240
-  manegementCost: 4
+  seedBagObject: {fileID: 8250982740674104777, guid: 2a003678ba02ab5489485b1f1a25d8c0, type: 3}
+  cropObject: {fileID: 4185280588983081536, guid: 56c1ccab2319ccb49951c645a2e90f97, type: 3}
+  buyCost: 12

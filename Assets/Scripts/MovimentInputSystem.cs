@@ -17,7 +17,7 @@ public class MovimentInputSystem : MonoBehaviour
     {
         Vector2 directions = MovimentEvent.instance.move;
 
-        Vector3 moviment = new Vector3(directions.x, 0, directions.y);
+        Vector3 moviment = new Vector3(directions.x, -1, directions.y);
 
         moviment *= speed * Time.deltaTime;
 

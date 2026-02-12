@@ -11,7 +11,30 @@ public class WheelBarrel : MonoBehaviour
 
     public List<Transform> seedSlots = new();
 
-    public void CarryingByPlayer(Transform playerFront)
+    Vector3 starterPosition;
+    Quaternion starterRotation;
+
+    public static WheelBarrel instance;
+
+    void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        starterPosition = transform.position;
+        starterRotation = transform.rotation;
+    }
+
+    public void EquipWheelBarrel(Transform playerFront)
     {
         transform.position = playerFront.position;
         transform.rotation = playerFront.rotation;
@@ -19,14 +42,25 @@ public class WheelBarrel : MonoBehaviour
         GetComponent<BoxCollider>().enabled = false;
     }
 
+    public void UnequipWheelBarrel()
+    {
+        transform.SetParent(null);
+        transform.position = starterPosition;
+        transform.rotation = starterRotation;
+        GetComponent<BoxCollider>().enabled = true;
+    }
+
     public void LoadSlot(Transform seedBag)
     {
         if(seedSlots.Count >= maxSeeds) return;
-        seedSlots.Add(seedBag);
+
+        Transform instanciated = Instantiate(seedBag);
+
+        seedSlots.Add(instanciated);
         int num = seedSlots.Count - 1;
-        seedBag.transform.position = slots[num].transform.position;
-        seedBag.transform.rotation = slots[num].transform.rotation;
-        seedBag.transform.SetParent(slots[num], true);
+        instanciated.transform.position = slots[num].transform.position;
+        instanciated.transform.rotation = slots[num].transform.rotation;
+        instanciated.transform.SetParent(slots[num], true);
     }
 
     public void TakeSeed()

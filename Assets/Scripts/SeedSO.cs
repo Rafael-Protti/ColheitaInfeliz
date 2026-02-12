@@ -4,6 +4,7 @@ using UnityEngine;
 public class SeedSO : ScriptableObject
 {
     public SeedType type;
-    public Transform crop;
-    public int coinCost;
+    public Transform seedBagObject;
+    public Transform cropObject;
+    public int buyCost;
 }

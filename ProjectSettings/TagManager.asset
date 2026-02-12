@@ -10,6 +10,7 @@ TagManager:
   - Spray
   - Hoe
   - SeedBag
+  - ShopArea
   layers:
   - Default
   - TransparentFX
