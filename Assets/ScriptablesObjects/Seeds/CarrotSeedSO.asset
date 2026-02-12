@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 121ab06fb9a18a44ca710ade70c144ba, type: 3}
+  m_Name: CarrotSeedSO
+  m_EditorClassIdentifier: Assembly-CSharp::SeedSO
+  type: 0
+  crop: {fileID: 6702149539990112773, guid: 484fcff00f0b9cc46a2596ff8dc74fe5, type: 3}
+  growthTime: 60
+  manegementCost: 2

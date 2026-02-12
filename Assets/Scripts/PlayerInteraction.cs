@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class PlayerInteraction : MonoBehaviour
 {
-    public Transform seed;
     public Transform wheelBarrelPosition;
     GameObject wheelBarrel;
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.CompareTag("FarmLand"))
+        if(other.gameObject.CompareTag("FarmLand") && wheelBarrel != null)
         {
-            Debug.Log("Encostou no lote de terra");
+            wheelBarrel.GetComponent<WheelBarrel>().TakeSeed();
+            Transform seed = wheelBarrel.GetComponent<WheelBarrel>().nextSeed;
             other.gameObject.GetComponent<FarmLand>().PlantSeed(seed);
         }
 

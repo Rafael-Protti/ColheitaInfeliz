@@ -2,16 +2,14 @@ using UnityEngine;
 
 public class FarmLand : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log("Plantando...");
-    }
-
     public void PlantSeed(Transform seed)
     {
-        Transform instanciated = seed;
-        Instantiate(instanciated);
+        if (seed == null) return;
+        Transform instanciated = seed.gameObject.GetComponent<Seed>().seedSO.crop;
         instanciated.position = transform.position;
+        instanciated.rotation = transform.rotation;
+        Instantiate(instanciated);
+        Destroy(seed.gameObject);
         GetComponent<BoxCollider>().enabled = false;
     }
 }
