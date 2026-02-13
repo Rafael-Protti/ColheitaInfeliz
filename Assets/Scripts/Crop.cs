@@ -11,6 +11,7 @@ public class Crop : MonoBehaviour
 
     int currentStage;
     float stageGrowthTime;
+    bool needWater;
     void Start()
     {
         currentStage = 0;
@@ -42,7 +43,16 @@ public class Crop : MonoBehaviour
 
     public void Harvest()
     {
-        transform.parent.GetComponent<FarmLand>().CheckIfAvaliable();
+        transform.parent.GetComponent<FarmLand>().MakeAvaliable();
+
+        SellCrop();
+
         Destroy(gameObject);
+    }
+
+    public void SellCrop()
+    {
+        int value = cropSO.sellCost;
+        Player.instance.AddCoins(value);
     }
 }

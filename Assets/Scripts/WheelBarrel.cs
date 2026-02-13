@@ -11,9 +11,6 @@ public class WheelBarrel : MonoBehaviour
 
     public List<Transform> seedSlots = new();
 
-    Vector3 starterPosition;
-    Quaternion starterRotation;
-
     public static WheelBarrel instance;
 
     void Awake()
@@ -26,28 +23,6 @@ public class WheelBarrel : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
-
-    private void Start()
-    {
-        starterPosition = transform.position;
-        starterRotation = transform.rotation;
-    }
-
-    public void EquipWheelBarrel(Transform playerFront)
-    {
-        transform.position = playerFront.position;
-        transform.rotation = playerFront.rotation;
-        transform.SetParent(playerFront, true);
-        GetComponent<BoxCollider>().enabled = false;
-    }
-
-    public void UnequipWheelBarrel()
-    {
-        transform.SetParent(null);
-        transform.position = starterPosition;
-        transform.rotation = starterRotation;
-        GetComponent<BoxCollider>().enabled = true;
     }
 
     public void LoadSlot(Transform seedBag)

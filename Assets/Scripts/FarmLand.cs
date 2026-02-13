@@ -1,11 +1,48 @@
+using TMPro;
 using UnityEngine;
 
 public class FarmLand : MonoBehaviour
 {
+    public int sellCost = 10;
+    public Transform sign;
+
     Transform crop;
-    public void PlantSeed(Transform seed)
+    bool isBought = false;
+
+    private void Start()
+    {
+        sign.GetChild(0).gameObject.GetComponent<TextMeshPro>().text = sellCost.ToString();
+    }
+
+    public void MakeAvaliable()
+    {
+        if (crop == null)
+        {
+            GetComponent<BoxCollider>().enabled = true;
+        }
+    }
+
+    public void TryToPlant()
+    {
+        if (isBought)
+        {
+            WheelBarrel.instance.TakeSeed();
+            Transform seed = WheelBarrel.instance.nextSeed;
+            PlantSeed(seed);
+        }
+
+        else
+        {
+            TryToBuy();
+        }
+
+    }
+    void PlantSeed(Transform seed)
     {
         if (seed == null) return;
+
+        if(!Player.instance.holdingWheelBarrel) return;
+
         Transform instanciated = Instantiate(seed.gameObject.GetComponent<Seed>().seedSO.cropObject);
         instanciated.transform.position = transform.position;
         instanciated.transform.rotation = transform.rotation;
@@ -14,11 +51,16 @@ public class FarmLand : MonoBehaviour
         GetComponent<BoxCollider>().enabled = false;
     }
 
-    public void CheckIfAvaliable()
+    void TryToBuy()
     {
-        if (crop == null)
+        if (Player.instance.coins >= sellCost)
         {
-            GetComponent<BoxCollider>().enabled = true;
+            Player.instance.SubtractCoins(sellCost);
+            isBought = true;
+            Destroy(sign.gameObject);
+            TryToPlant();
         }
+
+        else return;
     }
 }

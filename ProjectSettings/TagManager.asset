@@ -12,6 +12,7 @@ TagManager:
   - SeedBag
   - ShopArea
   - Crop
+  - Item
   layers:
   - Default
   - TransparentFX
