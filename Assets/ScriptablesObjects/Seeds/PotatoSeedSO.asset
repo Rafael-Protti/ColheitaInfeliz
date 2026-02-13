@@ -15,4 +15,4 @@ MonoBehaviour:
   type: 2
   seedBagObject: {fileID: 8250982740674104777, guid: 2a003678ba02ab5489485b1f1a25d8c0, type: 3}
   cropObject: {fileID: 9037949005767809384, guid: 1a8e486ed5f47c4449099636b777b3b6, type: 3}
-  buyCost: 12
+  buyCost: 8

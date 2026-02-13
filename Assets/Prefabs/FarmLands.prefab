@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 650210102764654327}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.001, z: 13.101}
+  m_LocalPosition: {x: 0, y: 0.001, z: 12}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -107,6 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmLand
   sellCost: 10
+  plowCost: 1
   sign: {fileID: 730962304789596124}
   plowedDirt: {fileID: 8795875822841741945}
 --- !u!65 &7968049139284892229
@@ -519,7 +520,7 @@ Transform:
   m_GameObject: {fileID: 3391885000697954427}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.001, z: 13.101}
+  m_LocalPosition: {x: 4, y: 0.001, z: 12}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -597,6 +598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmLand
   sellCost: 10
+  plowCost: 1
   sign: {fileID: 3817930315797774648}
   plowedDirt: {fileID: 7242361833120269558}
 --- !u!65 &5799511190027859112
@@ -739,7 +741,7 @@ Transform:
   m_GameObject: {fileID: 4375451485914269385}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0.001, z: 8.101}
+  m_LocalPosition: {x: -4, y: 0.001, z: 8.101}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -817,6 +819,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmLand
   sellCost: 10
+  plowCost: 1
   sign: {fileID: 7831255907966039283}
   plowedDirt: {fileID: 3501679348043458312}
 --- !u!65 &2480030640771444814
@@ -869,7 +872,7 @@ Transform:
   m_GameObject: {fileID: 4705665644178712055}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.001, z: 3.1009998}
+  m_LocalPosition: {x: 0, y: 0.001, z: 4}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -947,6 +950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmLand
   sellCost: 10
+  plowCost: 1
   sign: {fileID: 3472217305792320062}
   plowedDirt: {fileID: 8735312607478176136}
 --- !u!65 &7128296642967873608
@@ -999,7 +1003,7 @@ Transform:
   m_GameObject: {fileID: 5022328873263373397}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0.001, z: 3.1009998}
+  m_LocalPosition: {x: -4, y: 0.001, z: 4}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1077,6 +1081,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmLand
   sellCost: 10
+  plowCost: 1
   sign: {fileID: 3665980930162334828}
   plowedDirt: {fileID: 6314623201633893629}
 --- !u!65 &4156104534836675770
@@ -1297,6 +1302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmLand
   sellCost: 10
+  plowCost: 1
   sign: {fileID: 4939040590238619222}
   plowedDirt: {fileID: 4606084365524170374}
 --- !u!65 &1814634277545353023
@@ -1439,7 +1445,7 @@ Transform:
   m_GameObject: {fileID: 6677071304892170473}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.001, z: 8.101}
+  m_LocalPosition: {x: 4, y: 0.001, z: 8.101}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1517,6 +1523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmLand
   sellCost: 10
+  plowCost: 1
   sign: {fileID: 9013930345336997958}
   plowedDirt: {fileID: 1568017747343257110}
 --- !u!65 &44215504994067939
@@ -1569,7 +1576,7 @@ Transform:
   m_GameObject: {fileID: 6796108315830881795}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 0.001, z: 13.101}
+  m_LocalPosition: {x: -4, y: 0.001, z: 12}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1647,6 +1654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmLand
   sellCost: 10
+  plowCost: 1
   sign: {fileID: 1421035606822831445}
   plowedDirt: {fileID: 8587370292115587706}
 --- !u!65 &328769354416775590
@@ -1699,7 +1707,7 @@ Transform:
   m_GameObject: {fileID: 6964478585974150602}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5, y: 0.001, z: 3.1009998}
+  m_LocalPosition: {x: 4, y: 0.001, z: 4}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1777,6 +1785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FarmLand
   sellCost: 10
+  plowCost: 1
   sign: {fileID: 8764061379331866261}
   plowedDirt: {fileID: 3566637565648967038}
 --- !u!65 &8573684010593037520

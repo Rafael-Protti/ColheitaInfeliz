@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: BeetrootSO
   m_EditorClassIdentifier: Assembly-CSharp::CropSO
   croptype: 1
-  growthTime: 30
+  growthTime: 7
   managementCost: 1
-  sellCost: 6
+  sellCost: 8
