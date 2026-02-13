@@ -16,7 +16,7 @@ public class PlayerInteraction : MonoBehaviour
             if (!Player.instance.holdingItem)
             {
                 other.gameObject.GetComponent<HeldItem>().EquipItem();
-                Player.instance.CheckIfItIsWheelBarrel();
+                Player.instance.CheckWhatItemIsHeld();
                 return;
             }
 
@@ -24,7 +24,7 @@ public class PlayerInteraction : MonoBehaviour
             {
                 Player.instance.heldItem.gameObject.GetComponent<HeldItem>().UnequipItem();
                 other.gameObject.GetComponent<HeldItem>().EquipItem();
-                Player.instance.CheckIfItIsWheelBarrel();
+                Player.instance.CheckWhatItemIsHeld();
                 return;
             }
         }
@@ -37,7 +37,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (other.gameObject.CompareTag("Crop"))
         {
-            other.gameObject.GetComponent<Crop>().Harvest();
+            other.gameObject.GetComponent<Crop>().Interaction();
             return;
         }
     }

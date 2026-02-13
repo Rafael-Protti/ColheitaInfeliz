@@ -1,9 +1,14 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
-    public TextMeshProUGUI cointText;
+    public TextMeshProUGUI coinsText;
+    public TextMeshProUGUI currentCoinsText;
+    public TextMeshProUGUI neededCoinsText;
+    public UnityEngine.UI.Slider slider;
     
     public static HUDManager instance;
 
@@ -23,10 +28,14 @@ public class HUDManager : MonoBehaviour
 
     void Start()
     {
+        currentCoinsText.text = Player.instance.coinsNeeded.ToString();
         UpdateText();
     }
     public void UpdateText()
     {
-        cointText.text = "Moedas: " + Player.instance.coins.ToString();
+        coinsText.text = "Moedas: " + Player.instance.coins.ToString();
+        currentCoinsText.text = Player.instance.coins.ToString();
+        slider.value = Player.instance.coins;
+        slider.maxValue = Player.instance.coinsNeeded;
     }
 }

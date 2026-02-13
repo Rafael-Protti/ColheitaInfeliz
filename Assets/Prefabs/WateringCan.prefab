@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5752088149902743426}
   - component: {fileID: 5684751157287392470}
   - component: {fileID: 5574190293905215067}
+  - component: {fileID: 5873322263055032732}
   m_Layer: 0
   m_Name: WateringCan
   m_TagString: Item
@@ -125,3 +126,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5174396f66a32ec4d8dd704a92b6d656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeldItem
+  heldPosition: {fileID: 0}
+--- !u!114 &5873322263055032732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5452015459784004598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49ad9060c5ba4eb4ca2b72e5385badc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WateringCan

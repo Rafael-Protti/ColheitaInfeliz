@@ -15,22 +15,59 @@ public class Crop : MonoBehaviour
     void Start()
     {
         currentStage = 0;
-        stageGrowthTime = cropSO.growthTime/(growthStages.Count - 1);
+        stageGrowthTime = cropSO.growthTime/(growthStages.Count - 2);
         StartCoroutine(CropGrowth());
     }
 
-    void Update()
+    public void Interaction()
     {
-        
+        if (currentStage != growthStages.Count - 1)
+        {
+            WaterPlant();
+            return;
+        }
+
+        else Harvest();
+
     }
+
+    void Harvest()
+    {
+        transform.parent.GetComponent<FarmLand>().MakeAvaliable();
+
+        SellCrop();
+
+        Destroy(gameObject);
+    }
+
+    void SellCrop()
+    {
+        int value = cropSO.sellCost;
+        Player.instance.AddCoins(value);
+    }
+
 
     IEnumerator CropGrowth()
     {
         while (currentStage != growthStages.Count - 1)
         {
-            yield return new WaitForSeconds(stageGrowthTime);
+            needWater = true;
+            GetComponent<BoxCollider>().enabled = true;
+            Debug.Log("agua");
+
+            while (needWater)
+            {
+                yield return null;
+            }
+
+            Debug.Log("obrigada");
+            GetComponent<BoxCollider>().enabled = false;
             NextStage();
+
+            yield return new WaitForSeconds(stageGrowthTime);
         }
+
+        Debug.Log("Pronto para colher");
         GetComponent<BoxCollider>().enabled = true;
     }
 
@@ -41,18 +78,10 @@ public class Crop : MonoBehaviour
         growthStages[currentStage].gameObject.SetActive(true);
     }
 
-    public void Harvest()
+    void WaterPlant()
     {
-        transform.parent.GetComponent<FarmLand>().MakeAvaliable();
-
-        SellCrop();
-
-        Destroy(gameObject);
-    }
-
-    public void SellCrop()
-    {
-        int value = cropSO.sellCost;
-        Player.instance.AddCoins(value);
+        if (!Player.instance.holdingWateringCan) return;
+        Player.instance.SubtractCoins(cropSO.managementCost);
+        needWater = false;
     }
 }

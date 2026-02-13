@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8403168036508399078}
   - component: {fileID: 6539484438598707594}
   - component: {fileID: -2892237884059130379}
+  - component: {fileID: 8099311900956026918}
   m_Layer: 0
   m_Name: Hoe
   m_TagString: Item
@@ -126,3 +127,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeldItem
   heldPosition: {fileID: 0}
+--- !u!114 &8099311900956026918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8953354479492866700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90227c46207440142b4147d621e78d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hoe
