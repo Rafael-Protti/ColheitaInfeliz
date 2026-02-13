@@ -4,7 +4,7 @@ using UnityEngine;
 public class FarmLand : MonoBehaviour
 {
     public int sellCost = 10;
-    public int plowCost = 1;
+    public int plowCost = 0;
     public Transform sign;
     public Transform plowedDirt;
 
@@ -50,9 +50,16 @@ public class FarmLand : MonoBehaviour
     void PlowDirt()
     {
         if (!Player.instance.holdingHoe) return;
-        Player.instance.SubtractCoins(plowCost);
-        isPlowed = true;
-        plowedDirt.gameObject.SetActive(true);
+
+        if (Player.instance.coins >= plowCost)
+        {
+            Player.instance.SubtractCoins(plowCost);
+            isPlowed = true;
+            plowedDirt.gameObject.SetActive(true);
+        }
+
+        else return;
+        
     }
 
     void GetSeed()

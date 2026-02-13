@@ -35,7 +35,7 @@ public class HUDManager : MonoBehaviour
     {
         coinsText.text = "Moedas: " + Player.instance.coins.ToString();
         currentCoinsText.text = Player.instance.coins.ToString();
-        slider.value = Player.instance.coins;
         slider.maxValue = Player.instance.coinsNeeded;
+        slider.value = Player.instance.coins;
     }
 }

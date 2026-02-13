@@ -30,6 +30,7 @@ public class Player : MonoBehaviour
 
     public void SubtractCoins(int value)
     {
+        PreventNegative();
         coins -= value;
         HUDManager.instance.UpdateText();
     }
@@ -61,5 +62,11 @@ public class Player : MonoBehaviour
             holdingWheelBarrel = false;
             holdingWateringCan = false;
         }
+    }
+
+    void PreventNegative()
+    {
+        if (coins < 0)
+            return;
     }
 }

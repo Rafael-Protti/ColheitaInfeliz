@@ -81,7 +81,13 @@ public class Crop : MonoBehaviour
     void WaterPlant()
     {
         if (!Player.instance.holdingWateringCan) return;
-        Player.instance.SubtractCoins(cropSO.managementCost);
-        needWater = false;
+
+        if (Player.instance.coins >= cropSO.managementCost)
+        {
+            Player.instance.SubtractCoins(cropSO.managementCost);
+            needWater = false;
+        }
+
+        else return;
     }
 }

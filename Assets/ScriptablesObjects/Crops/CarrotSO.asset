@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: CarrotSO
   m_EditorClassIdentifier: Assembly-CSharp::CropSO
   croptype: 0
-  growthTime: 7
-  managementCost: 3
-  sellCost: 16
+  growthTime: 5
+  managementCost: 0
+  sellCost: 18
