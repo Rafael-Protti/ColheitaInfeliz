@@ -27,5 +27,11 @@ public class PlayerInteraction : MonoBehaviour
             WheelBarrel.instance.LoadSlot(other.gameObject.GetComponent<ShopArea>().seedBag);
             return;
         }
+
+        if (other.gameObject.CompareTag("Crop"))
+        {
+            other.gameObject.GetComponent<Crop>().Harvest();
+            return;
+        }
     }
 }

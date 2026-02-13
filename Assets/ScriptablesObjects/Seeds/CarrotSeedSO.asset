@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SeedSO
   type: 0
   seedBagObject: {fileID: 2577850996413558230, guid: 881964bf507b0794fa5cdf611267fbaa, type: 3}
-  cropObject: {fileID: 6702149539990112773, guid: 484fcff00f0b9cc46a2596ff8dc74fe5, type: 3}
+  cropObject: {fileID: 3492039190338369627, guid: a1e9430565e4c0d4da3b5e585ff708f1, type: 3}
   buyCost: 4
